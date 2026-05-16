@@ -26,6 +26,25 @@ A model that can process a million tokens of context cannot tell you what time i
 
 ---
 
+## Independent Model Consensus
+
+Same prompt. Six models. Zero coordination.
+
+> *"Is the problem of temporal context in LLM and autonomous agent sessions a solved problem? Is there a standardized, pip-installable open source library specifically designed to inject timestamps — including session duration and message delta — into every LLM message, while avoiding prefix caching issues?"*
+
+| Model | Response |
+|-------|----------|
+| Claude Haiku 4.5 | "**No, this is not a solved problem**... none provide a dedicated, battle-tested solution... The challenge remains fragmented across multiple libraries." |
+| GPT-5 mini | "**No** — handling time, session duration, and message deltas robustly... remains active research and engineering work." |
+| GPT-4o mini | "still an open area of research... an all-in-one, pip-installable solution tailored for this task **has yet to be established**." |
+| gpt-oss 120B | "**not solved**; most frameworks still rely on ad-hoc prompt engineering... No widely-adopted, pip-installable open-source library exists." |
+| Llama 4 Scout | "**not yet fully solved**... a standardized, pip-installable open-source library specifically designed for this purpose **does not appear to exist**." |
+| Mistral Small 4 | "**not yet fully solved**... developers often implement ad-hoc solutions using middleware or custom wrappers." |
+
+Screenshots in `/benchmark/`. No system prompts. No coordination. Reproducible.
+
+---
+
 ## Related Work
 
 Temporal context injection is not new. Framework developers have long recognized the clock gap and worked around it in ad-hoc ways:
